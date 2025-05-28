@@ -1,4 +1,3 @@
-# custom-sshkeyscan-timeout
 # Custom SSH Keyscan Timeout  for Okteto Pipelines
 
 > This repository is provided by the community and Okteto does not officially support it.
@@ -20,11 +19,11 @@ Update the `alias` in the `bashrc` file with your required values.
 Build the container image, setting `OKTETO_VERSION` to match your installed Okteto Platform version:
 
 ```bash
-# Replace 1.31.0 with your Okteto version
-docker build -t your-registry/pipeline-runner-custom-known-hosts:1.31.0 --build-arg=OKTETO_VERSION=1.31.0 .
+# Replace 1.32.0 with your Okteto version
+docker build -t your-registry/custom-sshkeyscan-timeout:1.32.0 --build-arg=OKTETO_VERSION=1.32.0 .
 
 # Push to your container registry
-docker push your-registry/pipeline-runner-custom-known-hosts:1.31.0
+docker push your-registry/custom-sshkeyscan-timeout:1.32.0
 ```
 
 ### 3. Update Helm Configuration
@@ -35,7 +34,7 @@ Add the `installer` section to your Helm configuration file (e.g. `values.yaml`)
 installer:
   runner:
     registry: your-registry
-    repository: pipeline-runner-custom-known-hosts
+    repository: custom-sshkeyscan-timeout
     tag: 1.32.0
 ```
 
