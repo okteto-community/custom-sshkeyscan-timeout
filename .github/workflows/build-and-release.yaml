@@ -51,4 +51,4 @@ jobs:
           push: ${{ github.event_name == 'release' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: OKTETO_VERSION=${{ github.event.release.name || 'dev' }}
+          build-args: OKTETO_VERSION=${{ github.event.release.name || '1.32.0' }}
