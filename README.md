@@ -36,7 +36,7 @@ installer:
   runner:
     registry: your-registry
     repository: pipeline-runner-custom-known-hosts
-    tag: 1.31.0
+    tag: 1.32.0
 ```
 
 ### 4. Upgrade Your Okteto Installation
